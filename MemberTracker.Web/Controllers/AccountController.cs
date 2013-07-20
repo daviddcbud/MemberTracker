@@ -10,6 +10,7 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using MemberTracker.Web.Filters;
 using MemberTracker.Web.Models;
+using MemberTracker.Data;
 
 namespace MemberTracker.Web.Controllers
 {
@@ -25,6 +26,35 @@ namespace MemberTracker.Web.Controllers
         {
             ViewBag.ReturnUrl = returnUrl;
             return View();
+        }
+
+        class LoginResult
+        {
+            public bool success { get; set; }
+            public string message { get; set; }
+            public string username { get; set; }
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult LoginJSON(string username,string password)
+        {
+            var result = new LoginResult();
+            result.success = true;
+            result.message = "";
+            result.username = username; //testing
+            if (WebSecurity.Login(username, password, persistCookie: false))
+            {
+
+               
+                return Json(result, JsonRequestBehavior.AllowGet);
+            }
+
+            // If we got this far, something failed 
+            
+            result.message = "login failed";
+            result.success = false;
+
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
 
         //
@@ -48,8 +78,7 @@ namespace MemberTracker.Web.Controllers
         //
         // POST: /Account/LogOff
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+         [HttpPost]
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
@@ -79,8 +108,18 @@ namespace MemberTracker.Web.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
-                    WebSecurity.Login(model.UserName, model.Password);
+                    WebSecurity.CreateUserAndAccount(model.Email, model.Password);
+                    WebSecurity.Login(model.Email, model.Password);
+                    var dbcontext=new DataContext();
+                    var unit=new ApplicationUnit();
+                    var user=new MemberTracker.Models.User();
+                    user.FirstName= model.FirstName;
+                    user.LastName=model.LastName;
+                    user.UserName = model.Email;
+                    unit.UserRepo.Add(user);
+                    unit.SaveChanges();
+
+                     
                     return RedirectToAction("Index", "Home");
                 }
                 catch (MembershipCreateUserException e)

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemeberTracker.Models
+namespace MemberTracker.Models
 {
    public class Person:IAudit 
     {
@@ -14,6 +14,9 @@ namespace MemeberTracker.Models
         public string MiddleName { get; set; }
         public string Suffix { get; set; }
         public string MailingAddressLines { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip{ get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
         public string FullName

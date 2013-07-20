@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MemeberTracker.Models;
+using MemberTracker.Models;
 using System.Data.Entity;
 using System.Configuration;
-using MemeberTracker.Data.Configuration;
-namespace MemeberTracker.Data
+using MemberTracker.Data.Configuration;
+namespace MemberTracker.Data
 {
     public class DataContext: DbContext
     {

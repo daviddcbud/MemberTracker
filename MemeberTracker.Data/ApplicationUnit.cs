@@ -1,11 +1,11 @@
-﻿using MemeberTracker.Models;
+﻿using MemberTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemeberTracker.Data
+namespace MemberTracker.Data
 {
     public class ApplicationUnit:IDisposable
     {

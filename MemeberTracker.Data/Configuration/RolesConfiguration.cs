@@ -1,9 +1,9 @@
-﻿using MemeberTracker.Models;
+﻿using MemberTracker.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 
-namespace MemeberTracker.Data.Configuration
+namespace MemberTracker.Data.Configuration
 {
     class RolesConfiguration:EntityTypeConfiguration<Role>
     {

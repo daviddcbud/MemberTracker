@@ -1,7 +1,7 @@
-﻿using MemeberTracker.Models;
+﻿using MemberTracker.Models;
 using System.Data.Entity.ModelConfiguration;
 
-namespace MemeberTracker.Data.Configuration
+namespace MemberTracker.Data.Configuration
 {
    public  class UserConfiguration:EntityTypeConfiguration<User>
     {

@@ -1,7 +1,7 @@
-﻿using MemeberTracker.Models;
+﻿using MemberTracker.Models;
 using System.Data.Entity.ModelConfiguration;
 
-namespace MemeberTracker.Data.Configuration
+namespace MemberTracker.Data.Configuration
 {
     public class PersonConfiguration: EntityTypeConfiguration<Person>
     {
@@ -12,6 +12,9 @@ namespace MemeberTracker.Data.Configuration
             this.Property((p) => p.MiddleName).IsOptional().HasMaxLength(50);
             this.Property((p) => p.Suffix).IsOptional().HasMaxLength(10);
             this.Property((p) => p.MailingAddressLines).IsOptional().HasMaxLength(100);
+            this.Property((p) => p.City).IsOptional().HasMaxLength(50);
+            this.Property((p) => p.State).IsOptional().HasMaxLength(20);
+            this.Property((p) => p.Zip).IsOptional().HasMaxLength(20);
             this.Property((p) => p.CreatedOn).HasColumnType("datetime");
             this.Property((p) => p.ModifiedOn).HasColumnType("datetime"); 
         }

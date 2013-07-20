@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemeberTracker.Models
+namespace MemberTracker.Models
 {
 
     public class User

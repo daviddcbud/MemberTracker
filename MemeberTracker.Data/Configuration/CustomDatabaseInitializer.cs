@@ -3,9 +3,9 @@ using System.Data;
 using System.Linq;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
-using MemeberTracker.Models;
+using MemberTracker.Models;
 
-namespace MemeberTracker.Data.Configuration
+namespace MemberTracker.Data.Configuration
 {
     public class CustomDatabaseInitializer:DropCreateDatabaseIfModelChanges<DataContext>
     {
@@ -15,7 +15,19 @@ namespace MemeberTracker.Data.Configuration
             var role = new Role();
             role.RoleName = "Administrator";
             context.Roles.Add(role);
+
+            CreateIndex(context, "UserName", "Users",true);
+            CreateIndex(context, "LastName", "People", false);
+            CreateIndex(context, "FirstName", "People", false);
             base.Seed(context);
         }
+        private void CreateIndex(DataContext context, string field, string table, bool unique = false)
+        {
+            context.Database.ExecuteSqlCommand(String.Format("CREATE {0}NONCLUSTERED INDEX IX_{1}_{2} ON {1} ({3})",
+                unique ? "UNIQUE " : "",
+                table,
+                field.Replace(",", "_"),
+                field));
+        } 
     }
 }

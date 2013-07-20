@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MemeberTracker.Models
+namespace MemberTracker.Models
 {
     public class Membership
     {
@@ -13,9 +13,9 @@ namespace MemeberTracker.Models
         public string ConfirmationToken { get; set; }
         public bool? IsConfirmed { get; set; }
         public DateTime? LastPasswordFailureDate { get; set; }
-        public int PasswordFailureSinceLastSuccess { get; set; }
+        public int PasswordFailuresSinceLastSuccess { get; set; }
         public string Password { get; set; }
-        public DateTime? PasswordChangeDate { get; set; }
+        public DateTime? PasswordChangedDate { get; set; }
         public string PasswordSalt { get; set; }
         public string PasswordVerificationToken { get; set; }
         public DateTime? PasswordVerificationTokenExpirationDate { get; set; }

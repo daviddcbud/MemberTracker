@@ -7,7 +7,7 @@
     <ProjectGuid>{94982852-2DA8-4F78-AC0F-3F2F58E2912E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MemeberTracker.Models</RootNamespace>
+    <RootNamespace>MemberTracker.Models</RootNamespace>
     <AssemblyName>MemeberTracker.Models</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

@@ -1,5 +1,5 @@
-﻿using MemeberTracker.Data;
-using MemeberTracker.Models;
+﻿using MemberTracker.Data;
+using MemberTracker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

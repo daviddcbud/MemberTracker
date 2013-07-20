@@ -7,7 +7,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
-namespace MemeberTracker.Data
+namespace MemberTracker.Data
 {
     public class GenericRepository<T>:IRepository<T> where T:class 
     {

@@ -1,9 +1,9 @@
-﻿using MemeberTracker.Models;
+﻿using MemberTracker.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
 
 
-namespace MemeberTracker.Data.Configuration
+namespace MemberTracker.Data.Configuration
 {
    public class MembershipConfiguration:EntityTypeConfiguration<Membership>
     {
@@ -13,7 +13,7 @@ namespace MemeberTracker.Data.Configuration
            HasKey(p => p.UserId);
            Property(p => p.UserId).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
            Property(p => p.ConfirmationToken).HasMaxLength(128).HasColumnType("nvarchar");
-           Property(p => p.PasswordFailureSinceLastSuccess).IsRequired();
+           Property(p => p.PasswordFailuresSinceLastSuccess).IsRequired();
            Property(p => p.Password).IsRequired();
            Property(p => p.PasswordSalt).IsRequired().HasMaxLength(128).HasColumnType("nvarchar");
            Property(p => p.PasswordVerificationToken).HasMaxLength(128).HasColumnType("nvarchar");
