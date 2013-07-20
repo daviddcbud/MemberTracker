@@ -1,1 +1,1 @@
-﻿var mainapp= angular.module('membertrackerapp', []);
+﻿var mainapp = angular.module('membertrackerapp', []);

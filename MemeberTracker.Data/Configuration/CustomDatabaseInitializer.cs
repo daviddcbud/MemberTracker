@@ -11,6 +11,10 @@ namespace MemeberTracker.Data.Configuration
     {
         protected override void Seed(DataContext context)
         {
+            //no need for savechanges
+            var role = new Role();
+            role.RoleName = "Administrator";
+            context.Roles.Add(role);
             base.Seed(context);
         }
     }

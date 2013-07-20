@@ -13,6 +13,7 @@ namespace MemeberTracker.Models
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string Suffix { get; set; }
+        public string MailingAddressLines { get; set; }
         public DateTime CreatedOn { get; set; }
         public DateTime ModifiedOn { get; set; }
         public string FullName

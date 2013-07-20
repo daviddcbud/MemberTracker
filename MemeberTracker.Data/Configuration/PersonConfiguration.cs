@@ -11,6 +11,7 @@ namespace MemeberTracker.Data.Configuration
             this.Property((p) => p.FirstName).IsRequired().HasMaxLength(50);
             this.Property((p) => p.MiddleName).IsOptional().HasMaxLength(50);
             this.Property((p) => p.Suffix).IsOptional().HasMaxLength(10);
+            this.Property((p) => p.MailingAddressLines).IsOptional().HasMaxLength(100);
             this.Property((p) => p.CreatedOn).HasColumnType("datetime");
             this.Property((p) => p.ModifiedOn).HasColumnType("datetime"); 
         }
