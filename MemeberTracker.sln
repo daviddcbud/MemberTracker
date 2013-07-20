@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeberTracker.Models", "MemeberTracker.Models\MemeberTracker.Models.csproj", "{94982852-2DA8-4F78-AC0F-3F2F58E2912E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemeberTracker.Data", "MemeberTracker.Data\MemeberTracker.Data.csproj", "{2C3C7796-1C40-4D9D-AF5D-64BBE21B1BE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemberTracker.Web", "MemberTracker.Web\MemberTracker.Web.csproj", "{CA32AC37-AC2E-45E1-BF0A-6C43E7869481}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94982852-2DA8-4F78-AC0F-3F2F58E2912E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94982852-2DA8-4F78-AC0F-3F2F58E2912E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94982852-2DA8-4F78-AC0F-3F2F58E2912E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94982852-2DA8-4F78-AC0F-3F2F58E2912E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C3C7796-1C40-4D9D-AF5D-64BBE21B1BE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C3C7796-1C40-4D9D-AF5D-64BBE21B1BE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C3C7796-1C40-4D9D-AF5D-64BBE21B1BE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C3C7796-1C40-4D9D-AF5D-64BBE21B1BE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA32AC37-AC2E-45E1-BF0A-6C43E7869481}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA32AC37-AC2E-45E1-BF0A-6C43E7869481}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA32AC37-AC2E-45E1-BF0A-6C43E7869481}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA32AC37-AC2E-45E1-BF0A-6C43E7869481}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

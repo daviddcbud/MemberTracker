@@ -1,0 +1,5 @@
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Models\bin\Debug\MemeberTracker.Models.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Models\bin\Debug\MemeberTracker.Models.pdb
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Models\obj\Debug\MemeberTracker.Models.csprojResolveAssemblyReference.cache
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Models\obj\Debug\MemeberTracker.Models.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Models\obj\Debug\MemeberTracker.Models.pdb

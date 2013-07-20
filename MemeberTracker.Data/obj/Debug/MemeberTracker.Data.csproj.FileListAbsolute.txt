@@ -1,0 +1,10 @@
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\MemeberTracker.Data.dll.config
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\MemeberTracker.Data.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\MemeberTracker.Data.pdb
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\EntityFramework.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\MemeberTracker.Models.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\MemeberTracker.Models.pdb
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\bin\Debug\EntityFramework.xml
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\obj\Debug\MemeberTracker.Data.csprojResolveAssemblyReference.cache
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\obj\Debug\MemeberTracker.Data.dll
+c:\users\david\documents\visual studio 2012\Projects\MemeberTracker\MemeberTracker.Data\obj\Debug\MemeberTracker.Data.pdb
