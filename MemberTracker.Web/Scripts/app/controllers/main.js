@@ -1,5 +1,5 @@
 ﻿
-mainapp.controller('MainCtrl', 
+mainapp.controller('MainController', 
 function($scope)  {
 
     $scope.title = 'Test';

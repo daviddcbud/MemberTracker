@@ -191,6 +191,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ajax-loader.gif" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -255,8 +256,9 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\lib\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\app\controllers\main.js" />
-    <Content Include="Scripts\app\controllers\test.js" />
+    <Content Include="Scripts\app\controllers\signin.js" />
     <Content Include="Scripts\app\modules\main.js" />
+    <Content Include="Scripts\app\services\signin.js" />
     <Content Include="Scripts\lib\angular-bootstrap-prettify.js" />
     <Content Include="Scripts\lib\angular-bootstrap-prettify.min.js" />
     <Content Include="Scripts\lib\angular-bootstrap.js" />

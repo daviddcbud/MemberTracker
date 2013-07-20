@@ -9,11 +9,20 @@ namespace MemberTracker.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
 
+            bundles.Add(new ScriptBundle("~/bundles/masterscripts").Include(
+                
+                        "~/Scripts/app/controllers/signin.js",
+                        "~/Scripts/app/services/signin.js"
+
+                        ));
+
             bundles.Add(new ScriptBundle("~/bundles/modules").Include(
                        "~/Scripts/app/modules/main.js"));
 
-               bundles.Add(new ScriptBundle("~/bundles/maincontroller").Include(
-                        "~/Scripts/app/controllers/main.js"));
+               bundles.Add(new ScriptBundle("~/bundles/mainindexcontrollers").Include(
+                        "~/Scripts/app/controllers/main.js"
+                        
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                         "~/Scripts/lib/bootstrap.js",
