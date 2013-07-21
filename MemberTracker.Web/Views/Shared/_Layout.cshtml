@@ -8,10 +8,15 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("styles", required: false)
-
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
 </head>
-<body class="container-fluid" ng-app="membertrackerapp" ng-cloak>
-    <header>
+<body   ng-app="membertrackerapp" ng-cloak>
+    
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -23,10 +28,10 @@
                     <span class="brand" style="color: white;">Member Tracker</span>
                     <div class="nav-collapse collapse">
                         <ul class="nav">
-                            <li class="active"><a href="#">Home</a></li>
+                            <li class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
-                            <li><a href="@Url.Action("Register", "Account")">Register</a></li>
+                            <li><a href="#/register">Register</a></li>
                         </ul>
 
                         @if (!User.Identity.IsAuthenticated)
@@ -43,14 +48,15 @@
                                 </form>
 
                                  
-                                <form action="@Url.Action("LogOff","Account")" method="post" ng-show="loggedin">
-                             <input type="submit"   value="{{logoutmessage}}" />
+                                <form action="@Url.Action("LogOff","Account")" method="post" ng-show="loggedin" id="logoutform">
+                                    <a href="#" onclick="document.getElementById('logoutform').submit()">{{logoutmessage}}</a>
+                              
                             </form>
                             </div>
                         }
                         else{
-                            <form action="@Url.Action("LogOff","Account")" method="post">
-                             <input type="submit"   value="@User.Identity.Name - Log out" />
+                            <form class="pull-right" action="@Url.Action("LogOff","Account")" method="post" id="logoutform">
+                                <a href="#" onclick="document.getElementById('logoutform').submit()">@User.Identity.Name - Log out</a>
                             </form>
                         }
                     </div>
@@ -58,12 +64,13 @@
                 </div>
             </div>
         </div>
-    </header>
-    <div id="body">
+     
+    <div id="body" class="container"  >
 
         @RenderSection("message", required: false)
-
+        
         @RenderBody()
+             
 
     </div>
     <footer>

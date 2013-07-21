@@ -15,6 +15,10 @@ namespace MemberTracker.Data.Configuration
             this.Property((p) => p.City).IsOptional().HasMaxLength(50);
             this.Property((p) => p.State).IsOptional().HasMaxLength(20);
             this.Property((p) => p.Zip).IsOptional().HasMaxLength(20);
+            this.Property((p) => p.HomePhone).IsOptional().HasMaxLength(20);
+            this.Property((p) => p.CellPhone).IsOptional().HasMaxLength(20);
+            this.Property((p) => p.WorkPhone).IsOptional().HasMaxLength(20);
+            this.Property((p) => p.DateOfBirth).IsOptional().HasColumnType("date");
             this.Property((p) => p.CreatedOn).HasColumnType("datetime");
             this.Property((p) => p.ModifiedOn).HasColumnType("datetime"); 
         }

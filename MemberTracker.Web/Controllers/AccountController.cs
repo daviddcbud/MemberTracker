@@ -38,14 +38,13 @@ namespace MemberTracker.Web.Controllers
         [AllowAnonymous]
         public JsonResult LoginJSON(string username,string password)
         {
+             
             var result = new LoginResult();
             result.success = true;
             result.message = "";
-            result.username = username; //testing
+            result.username = username;  
             if (WebSecurity.Login(username, password, persistCookie: false))
             {
-
-               
                 return Json(result, JsonRequestBehavior.AllowGet);
             }
 
@@ -97,6 +96,52 @@ namespace MemberTracker.Web.Controllers
 
         //
         // POST: /Account/Register
+
+
+        class RegisterResult
+        {
+            public bool Success { get; set; }
+            public string Message { get; set; }
+        }
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult RegisterJson(RegisterModel model)
+        {
+            var result = new RegisterResult();
+            result.Success = true;
+            result.Message = "";
+            if (ModelState.IsValid)
+            {
+                // Attempt to register the user
+                try
+                {
+                    result.Message = model.Email;
+                    return Json(result);
+                    WebSecurity.CreateUserAndAccount(model.Email, model.Password);
+                    WebSecurity.Login(model.Email, model.Password);
+                    var dbcontext = new DataContext();
+                    var unit = new ApplicationUnit();
+                    var user = new MemberTracker.Models.User();
+                    user.FirstName = model.FirstName;
+                    user.LastName = model.LastName;
+                    user.UserName = model.Email;
+                    unit.UserRepo.Add(user);
+                    unit.SaveChanges();
+
+                    return Json( result);
+                }
+                catch (MembershipCreateUserException e)
+                {
+                    result.Success = false;
+                    result.Message = e.Message;
+                    ModelState.AddModelError("", ErrorCodeToString(e.StatusCode));
+
+                }
+            }
+
+             
+              return Json( result);
+        }
 
         [HttpPost]
         [AllowAnonymous]

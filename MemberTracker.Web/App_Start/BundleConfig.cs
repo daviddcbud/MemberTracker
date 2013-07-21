@@ -20,7 +20,8 @@ namespace MemberTracker.Web
                        "~/Scripts/app/modules/main.js"));
 
                bundles.Add(new ScriptBundle("~/bundles/mainindexcontrollers").Include(
-                        "~/Scripts/app/controllers/main.js"
+                        "~/Scripts/app/controllers/main.js",
+                        "~/Scripts/app/controllers/register.js"
                         
                         ));
 

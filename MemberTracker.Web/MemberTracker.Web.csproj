@@ -256,6 +256,7 @@
     <Content Include="Global.asax" />
     <None Include="Scripts\lib\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\app\controllers\main.js" />
+    <Content Include="Scripts\app\controllers\register.js" />
     <Content Include="Scripts\app\controllers\signin.js" />
     <Content Include="Scripts\app\modules\main.js" />
     <Content Include="Scripts\app\services\signin.js" />
@@ -582,6 +583,7 @@
     <Content Include="Scripts\lib\modernizr-2.6.2.js" />
     <Content Include="Scripts\lib\underscore.js" />
     <Content Include="Scripts\lib\underscore.min.js" />
+    <Content Include="Templates\register.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
